@@ -17,7 +17,6 @@ def team(n):
 
 img=cv2.imread(path)
 hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
-rects={}
 
 for i in range(2):
     name,lower,upper=team(i)
