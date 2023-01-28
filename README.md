@@ -25,6 +25,7 @@ After importing the required libraries, a function was defined in order to diffe
 If the argument is 0, the function returns the information for Portugal and the argument of 1 returns detail for Brazil. These HSV values were obtained by trial and error.
 
 I realized that I should have used Trackbars in order to obtain the exact values for more accuracy, so I am trying to do that now. The following is the code I used, it was obtained from the tutorial video that was provided earlier to learn OpenCV. However, the values were not changing in real-time when I moved the trackbars. I am in the process of figuring out the issues with this.
+
 cv2.namedWindow("Trackbars")
 cv2.resizeWindow("Trackbars", 640, 240)
 cv2.createTrackbar("Hue Min", "Trackbars", 0, 179, empty)
