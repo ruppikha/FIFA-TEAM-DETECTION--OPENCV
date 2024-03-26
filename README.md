@@ -1,13 +1,36 @@
-# OPENCV-PROJECT
-FIFA Team Detection Using OpenCV
+# FIFA Team Detection Using OpenCV
 
-The code is limited to detecting Brazil and Portugal (2018) FIFA home game jerseys. 
+This project utilizes OpenCV for detecting FIFA team jerseys, specifically focusing on Brazil and Portugal (2018) home game jerseys. The code aims to identify players wearing these jerseys in images or video streams.
 
-# OPENCV-PROJECT
-FIFA Team Detection Using OpenCV
+## Overview
 
-The code is limited to detecting Brazil and Portugal (2018) FIFA home game jerseys. 
+The project consists of the following components:
 
+- **Code.py**: Python script containing the main code for detecting team jerseys.
+- **Documentation- OPENCV PROJECT.pdf**: Documentation providing insights into the project, including methodologies and implementation details.
+- **OPENCV PROJECT VIDEO.mp4**: Video demonstrating the project's functionality.
+- **Test Images**: Folder containing test images used for evaluating the detection algorithm.
+
+## Usage
+
+The core functionality of the project involves differentiating between Brazil and Portugal players. This is achieved by defining HSV (Hue, Saturation, Value) color ranges for each team's jersey. 
+
+The project includes a function named `team(n)` which takes an argument `n` representing the team index (0 for Portugal, 1 for Brazil). This function returns the team's name along with the corresponding HSV lower and upper bounds for color range identification.
+
+For more precise color range selection, the project aims to implement Trackbars to dynamically adjust HSV values. However, there seem to be issues with the Trackbars not updating in real-time, which the developer is currently investigating.
+
+## Implementation
+
+The main steps involved in the detection process are as follows:
+
+1. **HSV Conversion**: Convert the input image to the HSV color space.
+2. **Color Range Masking**: Use the defined HSV color ranges to create masks for each team's jersey.
+3. **Contour Detection**: Find contours within the masked regions.
+4. **Bounding Box Drawing**: Draw bounding rectangles around detected jerseys based on contour areas.
+5. **Labeling**: Label the rectangles with the respective team names using `cv2.putText`.
+6. **Display**: Show the annotated image to the user.
+
+## Detailed Explaination
 After importing the required libraries, a function was defined in order to differentiate between Brazil and Portugal players.
 
  def team(n):
